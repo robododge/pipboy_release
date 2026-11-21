@@ -319,7 +319,7 @@ while mainLoop:
                 updateScreen=True
             elif menuItem==3 and bikeMonitor.handleTap(event.pos):
                 updateScreen=True
-            # on MAP a tap swaps between the location map and the strava route
+            # on MAP a tap swaps between the location map and the crankfeed route
             elif menuItem==2 and mapView.handleTap(event.pos):
                 updateScreen=True
             else:
@@ -415,8 +415,8 @@ while mainLoop:
             pipboyScreen[menuItem].drawScreen(screen,bodyFont,5,0,menuFontSize)
             gear.draw(screen,bodyFont,dColor)
         if menuItem==2:
-            if mapView.showStrava:
-                mapView.drawStrava(screen,bodyFont,dColor)
+            if mapView.showRoute:
+                mapView.drawRoute(screen,bodyFont,dColor)
             else:
                 pipboyScreen[menuItem].drawScreen(screen,bodyFont,8,0,menuFontSize)
             mapView.drawButtons(screen,bodyFont,dColor)

@@ -52,8 +52,9 @@ Runs on Raspberry Pi OS (Debian trixie) on a Pi 3 with a 7" HDMI touchscreen
 - `gear.py` - INV lists bike equipment with a selectable wheelset
 - `clock.py`, `bikeMonitor.py` - DATA swaps between a big clock and a simulated
   cycling monitor (power, cadence, speed, scrolling heart rate graph)
-- `mapView.py` - MAP swaps to a green rendition of a Strava route
-  (`UIScreens/STRAVA_MAP.png` is a placeholder - drop in your own)
+- `mapView.py` - MAP swaps to a green rendition of a route from CrankFeed, a
+  made-up cycling workout feed (`UIScreens/CRANKFEED_MAP.png` is a placeholder -
+  drop in your own)
 - `radio.py`, `audioOutput.py` - RADIO plays mp3s from `radio/` (not in git) and
   switches output between the screen's HDMI speakers and a bluetooth speaker
 - `spin.py` - SPIN tab: pick a spin class instructor, book classes, see their

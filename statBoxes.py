@@ -16,8 +16,8 @@ stats = [
      "quips":["Seek a doctor. Or a stimpak.", "Mostly intact.", "Fit as a brahmin."]},
     {"name":"DRUNK",    "bar":(5,168,42,7),   "side":"left",  "value":15,
      "quips":["Stone cold sober.", "Feeling warm and fuzzy.", "Who moved the floor?"]},
-    {"name":"THC",      "bar":(202,168,42,7), "side":"right", "value":40, "unit":"mg", "drift":False,
-     "quips":["Barely a sip of the Delta-9 drink.", "40mg of Delta-9 drink in. Snacks recommended.", "Fully baked. Do not operate the Pip-Boy."]},
+    {"name":"CHEMS",    "bar":(202,168,42,7), "side":"right", "value":40, "unit":"mg", "drift":False,
+     "quips":["Clean as a vault floor.", "Mind slightly altered. Snacks recommended.", "Fully chemmed up. Do not operate the Pip-Boy."]},
 ]
 # optional per stat: "unit" shows the value as e.g. 40/100mg instead of a percentage,
 # "drift":False keeps the value fixed instead of wandering

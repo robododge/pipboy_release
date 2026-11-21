@@ -1,0 +1,5 @@
+# radio station mp3s are copied onto the pi, not kept in git
+radio/*.mp3
+__pycache__/
+spin_bookings.json
+gear_selection.json

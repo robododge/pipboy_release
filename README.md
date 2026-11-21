@@ -38,3 +38,28 @@ prototypeVersions - old, experimental (and probably broken) code that I used to 
 
 notes - a few misc notes that I grabbed as I was working out how to do this.
 
+
+## Additions in this fork
+
+Runs on Raspberry Pi OS (Debian trixie) on a Pi 3 with a 7" HDMI touchscreen
+(1024x600). The original 480x320 layout is scaled fullscreen with
+`pygame.SCALED`, and everything can be driven by touch.
+
+- `run-pipboy.sh` - launcher (refreshes the INV screen, starts the UI); add it to
+  desktop autostart to boot straight into the pipboy
+- touch: tap a menu tab, tap elsewhere for the next screen, hold 3 seconds to shut down
+- `statBoxes.py` - the STAT vault boy's condition bars show tappable joke stats
+- `gear.py` - INV lists bike equipment with a selectable wheelset
+- `clock.py`, `bikeMonitor.py` - DATA swaps between a big clock and a simulated
+  cycling monitor (power, cadence, speed, scrolling heart rate graph)
+- `mapView.py` - MAP swaps to a green rendition of a Strava route
+  (`UIScreens/STRAVA_MAP.png` is a placeholder - drop in your own)
+- `radio.py`, `audioOutput.py` - RADIO plays mp3s from `radio/` (not in git) and
+  switches output between the screen's HDMI speakers and a bluetooth speaker
+- `spin.py` - SPIN tab: pick a spin class instructor, book classes, see their
+  favourite phrases, with an animated rider on a spin bike
+
+Python packages come from Raspberry Pi OS (`python3-pygame`, `python3-rpi-lgpio`,
+`python3-requests`) plus `noise` and `pyky040` in a venv created with
+`--system-site-packages`. Remove the `RPi.GPIO` that `pyky040` pulls in so the
+system `rpi-lgpio` shim is used on newer kernels.
